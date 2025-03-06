@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* 환경경영 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Business and Human Rights'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+
+/* con1 */
+.con1{display: flex; justify-content: space-between; width: 1400px; margin: 0 auto 100px auto;}
+.con1 h3{font-size: 1.5rem;}
+
+.con1 .con1_right{width: 1000px;}
+.con1 .con1_right p{text-align: justify; font-size: 1.1rem;}
+
+.con1_btm{margin-top: 50px; padding: 30px 0 30px 60px; border: 2px solid #ddd;
+line-height: 3.5rem;}
+.con1_btm li{position: relative;}
+.con1_btm li em{color: #fff; font-style: normal; margin-right: 30px;}
+.con1_btm li::before{content: '';
+width: 30px; height: 30px; background: #A2AD00; border-radius: 50%;
+position: absolute; left: -11px; top: 14px; z-index: -1;}
+
+/* con2 */
+.con2{margin-top: 80px; position: relative; width: 1400px; height: 400px; margin: 0 auto;}
+.con2 h3{font-size: 1.5rem; margin-bottom: 50px;}
+.tab{width: 150px; height: 150px; border-radius: 50%; background: #fff; text-align: center;
+font-size: 1.4rem; line-height: 9rem; border: 2px solid #ddd; transition: all .3s;
+position: relative;}
+.tab1{overflow: hidden;}
+.tab1 img{position: absolute; left: 45px; bottom: -20px; opacity: 0; transition: all .5s;}
+.tab1:hover{background: #A2AD00; color: #fff; line-height: 5.5rem;}
+.tab1:hover img{opacity: 1; bottom: 20px;}
+
+.tab2{overflow: hidden; position: absolute; left: 170px; top: 85px;}
+.tab2 img{position: absolute; left: 45px; bottom: -20px; opacity: 0; transition: all .5s;}
+.tab2:hover{background: #A2AD00; color: #fff; line-height: 5.5rem;}
+.tab2:hover img{opacity: 1; bottom: 20px;}
+
+.tab3{overflow: hidden; position: absolute; left: 340px; top: 85px;}
+.tab3 img{position: absolute; left: 45px; bottom: -20px; opacity: 0; transition: all .5s;}
+.tab3:hover{background: #A2AD00; color: #fff; line-height: 5.5rem;}
+.tab3:hover img{opacity: 1; bottom: 20px;}
+
+.con2 .current img{position: absolute; left: 45px; bottom: 20px; opacity: 1;}
+.con2 .current{background: #A2AD00; color: #fff; line-height: 5.5rem;}
+
+.contlist{position: absolute; left: 700px; top: 100px; display: none;}
+.contlist dt{font-size: 1.5rem; font-weight: 500; margin-bottom: 25px;}
+.contlist dd{color: #666; margin-left: 20px; position: relative; font-size: 1.1rem;}
+.contlist dd::after{content: ''; width: 5px; height: 5px; border-radius: 50%; background: #666;
+position: absolute; left: -15px; top: 10px;}
+
+.contlist1::before{content: '2024'; color: #A2AD00; font-size: 10rem; font-weight: 800; opacity: .2;
+position: absolute; left: 300px; top: -10px;}
+.contlist2::before{content: '2027'; color: #A2AD00; font-size: 10rem; font-weight: 800; opacity: .2;
+position: absolute; left: 300px; top: -10px;}
+.contlist3::before{content: '2030'; color: #A2AD00; font-size: 10rem; font-weight: 800; opacity: .2;
+position: absolute; left: 300px; top: -10px;}
+
+/* con3 */
+.content_area .con3{width: 100%; height: 400px; background: #f8f8f8;}
+.con3_inner{width: 1400px; margin: 0 auto; display: flex; justify-content: space-between;}
+
+.con3_left h3{font-size: 1.5rem; margin-top: 130px;}
+.con3_left p{color: #606060; font-weight: 400; margin-top: 20px;}
+
+.con3_right{display: flex; text-align: center; gap: 70px; padding-right: 100px;
+margin-top: 120px;}
+.con3_right span{font-size: 1.4rem; line-height: 6rem;}
+.con3_right .circle{width: 100px; height: 100px; border-radius: 50%; background: #fff;}
+.con3_right p{margin-top: 10px; font-size: 1.1rem; font-weight: 400;}

@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* 문의 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Contact'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+/* 메일폼 */
+.contact{width: 1200px; margin: 30px auto; border: 1px solid #fff;padding: 30px; position: relative;}
+.intro{width: 1200px; margin: 0 auto; display: flex; gap: 20px; justify-content: center; background: #f2f2f2; padding: 10px;}
+.intro p{font-size: 1.2rem; margin-top: 20px;}
+
+.contact div:not(.agree){padding: 20px;}
+
+.contact label{font-size: 1.1rem; font-weight: 500;
+  width: 100px; display: block; margin-bottom: 10px;}
+
+/* .contact input, .contact textarea{padding: 15px 5%; width: 90%; font-size: 1.5rem;
+  border: 0; background: #fff; color: #333 ;
+  border-radius: 10px; outline: none; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.1); 
+  transition: all .5s;} */
+
+.contact #user-name, .contact #user-email, .contact #user-tel{padding: 15px 5%; width: 40%; font-size: 1.5rem;
+  border: 0; background: #fff; color: #333 ;
+  border-radius: 10px; outline: none; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.1); 
+  transition: all .5s;}
+
+.contact textarea{padding: 15px 5%; width: 90%; font-size: 1.5rem;
+  border: 0; background: #fff; color: #333 ;
+  border-radius: 10px; outline: none; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.1); 
+  transition: all .5s;}
+
+.contact input:focus, .contact textarea:focus{box-shadow: 1px 1px 10px 1px rgba(0,0,0,.4); 
+  transform: scale(1.01);}     
+
+.contact textarea{height: 200px; }
+
+.contact button{padding: 15px 50px; background: #00A1DE;
+  color: #fff; font-size: 1.3rem; border-radius: 15px;
+  border: 0; margin: 20px auto 0;display: block; cursor: pointer; transition: .3s;}
+.contact button:hover{background: #00719a;}
+
+.agree {text-align: center;
+  font-size: 1.1rem;
+}
+.agree_text{font-size: .9rem; text-align: center; margin-bottom: 10px;}
+#input_checkbox{width: 50px;}
+
+#user-tel::placeholder {
+font-size: 1.1rem; color: #777;
+}
+
+select {
+  width: 200px;
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8.825L1.175 4 2.238 2.938 6 6.7l3.762-3.762L10.825 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: .5s;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,.1);
+  color: #333;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,.3);
+}
+
+select option {padding: 8px; font-size: 1rem;
+}
+
+.cont_img{width: 550px; height: 400px; position: absolute; right: 0; top: 50px;}

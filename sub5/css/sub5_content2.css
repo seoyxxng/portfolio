@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 인사제도페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Personnel System'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: hsl(34, 100%, 46%);}
+
+/* intro */
+.intro{width: 1400px; margin: 50px auto 150px auto;}
+.intro p{font-size: 1.1rem;}
+
+/* con1 */
+.con1{width: 1400px;  margin: 0 auto 100px auto;}
+
+.proc{display: flex; text-align: center; font-size: 1.2rem; padding: 50px 0 50px 80px; position: relative;}
+.proc::before{content: ''; width: 100%; height: 2px; background: #eaeaea; position: absolute; left: 0; top: 150px; z-index: -1;}
+.proc p{margin-top: 40px;}
+.proc1{width: 155px; height: 155px; border-radius: 50%; background: #eaeaea; color: #393939;}
+.proc2{width: 230px; height: 230px; border-radius: 50%; background: #585858; color: #fff; margin: -30px;}
+.proc2 p{margin-top: 70px;}
+.proc3{width: 170px; height: 170px; border-radius: 50%; background: #00A1DE; color: #fff;}
+.proc4{width: 230px; height: 230px; border-radius: 50%; background: #E98300; color: #fff; margin: -30px; z-index: 1;}
+.proc4 p{margin-top: 68px;}
+.proc5{width: 190px; height: 190px; border-radius: 50%; background: #eaeaea; color: #393939;}
+.proc5 p{margin-top: 60px;}
+
+.greeting li{display: flex; gap: 20px; margin-bottom: 50px;}
+.greeting dt{margin-bottom: 20px; font-size: 1.1rem; font-weight: 500;}
+.greeting dd{text-align: justify;}
+
+.greet1 dt{width: 30%; background: #eee; border-radius: 0 60px 60px 0; padding: 3px;}
+.greet2 dt{width: 50%; background: #eee; border-radius: 0 60px 60px 0; padding: 3px;}
+.greet3 dt{width: 70%; background: #eee; border-radius: 0 60px 60px 0; padding: 3px;}
+.greet4 dt{width: 100%; background: #eee; border-radius: 0 60px 60px 0; padding: 3px;}
+.greet5 dt{width: 50%; background: #eee; border-radius: 0 60px 60px 0; padding: 3px;}
+.greet6 dt{width: 100%; background: #eee; border-radius: 0 60px 60px 0; padding: 3px;}
+
+.greet5 a{margin-top: 20px; color: #666;}
+.greet5 span{margin-left: 10px; transition: .3s;}
+.greet5 a:hover span{margin-left: 30px;}
+.greet5 a:hover{color: #333; font-weight: 500;}
+
+.lastt{width: 100%; height: 100%;}
+
+/* sticky menu */
+
+.sticky{height: 100%; font-size: 1.2rem; text-align: center; padding-top: 20px;
+position: absolute; top: 0;}
+.sticky h3 a{color: #666; font-weight: 500; transition: .3s; text-align: left;}
+.sticky h3 a:hover{font-weight: 600;}
+.con1 h3:nth-of-type(1){margin-bottom: 20px;}
+.on{position: fixed; top: 95px;}
+.sticky h3 .cur{color: #00A1DE; font-weight: 500;}
+.inner{width: 1045px; margin-left: 350px;}
+.sticky_box{position: relative;}

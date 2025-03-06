@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 사업영역 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Education·Publishing'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+#content .con1{width: 1400px; position: relative; margin: 50px auto;}
+#content .con1_img{width: 2000px; height: 600px; background: url(../images/content2/main.jpg)no-repeat;
+margin: 70px auto;}
+#content .con1 h3{font-size: 2.8rem; margin-bottom: 20px;}
+#content .con1 p{font-size: 1.2rem;}
+
+#content .con2{width: 1400px; height: 400px; position: relative; margin: 0 auto;}
+#content .con2 strong{font-size: 1.8rem; position: absolute; left: 0; top: 0;}
+#content .con2 .r1{position: absolute; right: 0; top: 150px; text-align: right;}
+#content .con2 .r2{position: absolute; right: 0; top: 220px; text-align: right;}
+
+#content .con3{width: 1400px; margin: 0 auto 100px auto;}
+#content .con3 ul{display: flex; flex-direction: column; gap:60px}
+#content .con3 ul li{display: flex;}
+#content .con3 ul li:nth-of-type(even){flex-flow: row-reverse;}
+#content .con3 ul li:nth-child(even) .box{margin-left: 50px; padding-right: 20px;}
+/* #content .con3 ul li:nth-child(odd) .box{padding-right: 50px;} */
+#content .box{display: flex; flex-direction: column; justify-content: space-evenly;}
+#content .con3 dl{margin: 0 20px;}
+#content .con3 dt{font-size: 1.6rem; font-weight: 700; margin-bottom: 30px;}
+#content .con3 img{border-radius: 10px;}

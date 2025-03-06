@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* CI 페이지 내용영역 */
+
+.content_area{width: 1400px; margin: 0 auto;}
+
+#content .title_area h2::before{content: 'Location'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+.map_box{width: 1200px; height: 600px;
+  margin: 30px auto;}
+#map{width: 1200px; height: 600px;}
+
+#content ul{font-size: 1.2rem; margin-left: 100px;}
+#content ul li{display: flex; gap: 30px; margin-bottom: 20px;}
+#content ul li:nth-of-type(1){gap: 65px;}
+#content ul li span{font-size: 1.3rem; font-weight: 500;}
+
+table{width: 1200px; height: 350px; margin: 100px auto;}
+table tbody{border-top: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9;}
+table tbody tr:nth-of-type(3){border-bottom: 1px solid #d9d9d9;}
+table .bs{font-size: 1.3rem; text-align: center; width: 250px; position: relative;}
+table th{width: 100px; text-align: center; font-size: 1.2rem; font-weight: 500;}
+table .bus i{font-size: 3rem; background: #646F70; color: #fff;
+    padding: 10px; border-radius: 50%;
+    display: inline-block; width: 60px; height: 60px;
+    text-align: center; line-height: 60px; margin-right: 20px;
+    position: absolute; left: 0; top: 80px;}
+table .sub i{font-size: 3rem; background: #646F70; color: #fff;
+    padding: 10px; border-radius: 50%;
+    display: inline-block; width: 60px; height: 60px;
+    text-align: center; line-height: 60px; margin-right: 20px;
+    position: absolute; left: 0; top: 15px;}
+table .blue_bus{color: #00A1DE;}
+table .green_bus{color: #A2AD00;}
+table .red_bus{color: #FF4848;}
+table .blue_sub{position: relative; color: #fff;}
+table .blue_sub span::before{content: ''; width: 30px; height: 30px; 
+  background: #0032A0; border-radius: 15px;
+  position: absolute; left: 35px; top: 14px; z-index: -1;}
+table .green_sub{position: relative; color: #fff;}
+table .green_sub span::before{content: ''; width: 30px; height: 30px;
+  background: #00B140; border-radius: 15px;
+  position: absolute; left: 35px; top: 14px; z-index: -1;}
+table td{font-size: 1.3rem; padding: 10px 0 10px 50px;}
+table .sub_center{width: 100px; text-align: center;}

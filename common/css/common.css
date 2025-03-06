@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* css reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, body, div , span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{margin: 0; padding: 0; border: 0;}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{display: block;}
+html{font-size: 16px;}
+body{font-family: "Noto Sans KR", sans-serif; color: #333}
+ol, ul{list-style: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+address{font-style: normal}
+a{color: #333; text-decoration: none; display: block;}
+img{border: 0; vertical-align: top;}
+.hidden{display: block; width: 1px; height: 1px;
+  overflow: hidden; color: #fff; position: absolute; left: -1000%; top: 0;}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.skipNav{position:fixed; width:100%; overflow:hidden; z-index:110; 
+  font-family: 'Noto Sans KR', sans-serif;}
+.skipNav a{height:1px; margin-bottom:-1px;overflow:hidden; 
+  text-align:center; color:#fff; font-size:1.2rem; font-weight: 700;}
+.skipNav a:hover, .skipNav a:focus,.skipNav a:active{height:auto;padding:15px 0; background: #00a1d1;}
+
+/* 
+font-family: "Noto Sans KR", sans-serif; font-weight:100~900;
+font-family: "Roboto", sans-serif;
+*/
+
+.wrap{width: 100%; overflow: hidden;}
+
+/* 헤더 공통 css */
+#headerArea{width: 100%; position: fixed; left: 0; top: 0; z-index: 100; height: 90px;
+  background: rgba(255,255,255,.7); backdrop-filter: blur(5px);}
+#headerArea::before{content: ''; display: block; width: 100%; height: 1px;
+  background: #dddddd; position: absolute; left: 0; top: 91px; opacity: 0.5;}
+#headerArea .header_inner{width: 1400px; margin: 0 auto; display: flex;
+  justify-content: space-between;}
+#headerArea .logo{margin-top: 8px;}
+#headerArea .logo a{width: 130px; height: 67px;
+  background: url(../images/logo.png); text-indent: -999px; overflow: hidden;}
+#headerArea #gnb{width: 900px;}
+#headerArea #gnb>ul{display: flex;}
+#headerArea #gnb>ul>li{width: 16.66%; text-align: center; position:relative;}
+#headerArea #gnb h3{padding: 30px 0; font-weight: 600; font-size: 1.2rem;}
+#headerArea .top_menu{font-size: 1rem; width: 125px; display: flex;}
+#headerArea .top_menu li{width: 50%; text-align: center; padding: 30px 0;}
+#headerArea .top_menu li .wel{font-size: 0.8rem; width: 60px; height: 24px; color: #fff;
+  background: #00A1DE; border-radius: 5px; padding-top: 3px; transition: .3s;}
+#headerArea .top_menu li .wel:hover{background: #02678c;}
+#headerArea .top_menu li .logout{font-size:1rem; padding-right: 3px; color: #333;}
+#headerArea .top_menu li .my{margin-left: 5px; margin-top: 2px; font-size: .9rem; color: #777; transition: .3s;}
+#headerArea .top_menu li .my:hover{color: #333;}
+
+#gnb ul.dropdownmenu ul{width: 100%; height: 163px; position: absolute; left: 0; top:90px;
+  display: none; padding-top: 10px;}
+#gnb ul.dropdownmenu ul li a{text-align: center; padding: 5px 0; font-size: 1.05rem;}
+#gnb ul.dropdownmenu li ul li a:hover{transition: all .3s;}
+
+
+#headerArea #gnb ul.dropdownmenu li a.depth1::after{content: ''; display: block;
+  width: 0; height: 2px; background: #00a1d1;
+  position: absolute; left: 50%; bottom: -3px; transform: translateX(-50%);
+  transition: all .3s; z-index: -1;
+}
+#headerArea #gnb ul.dropdownmenu li:hover a.depth1::after{content: ''; display: block;
+  width: 100%; height: 2px; background: #00a1d1;
+  left: 50%; bottom: -3px;
+  transform: translateX(-50%); z-index: -1;}
+#headerArea #gnb ul.dropdownmenu li a.depth1{padding: 1px;}
+
+
+/* 푸터 공통 css */
+#footerArea{background: #eee; height: 300px;}
+#footerArea img{width: 182px; height: 94px; margin: 0 170px 0 110px;}
+#footerArea .footer_logo {position: relative;}
+#footerArea .footer_logo::after {content: ''; width: 1px; height: 165px;
+  position: absolute; top: -20%; right: 20%; background: #a8a8a8;
+  backdrop-filter: opacity(30%);}
+#footerArea .footer_inner{width: 1400px; height: 300px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; justify-content: center;}
+#footerArea .footer_top{display: flex;  gap: 80px; margin: 0 auto; padding-top: 30px;}
+#footerArea .footer_bottom{display: flex; justify-content: center;}
+#footerArea address{margin-bottom: 15px;}
+#footerArea .copy{font-size: 0.8rem; color: #4F4F4F;}
+#footerArea .footer_center{width: 600px;}
+
+
+#footerArea .family{width: 150px; height: 30px; 
+  background: #fff; position: relative;
+  margin: -50px 0 10px 200px; transition: all .3s;}
+#footerArea .family i{margin-left: 5px;}
+#footerArea .family .arrow:hover {color: #fff; background: #333;}
+#footerArea .family .arrow{height: 30px; text-align: center; color: #333;
+  border: 1px solid #bbb;}
+
+#footerArea .aList{position: absolute; left: 0; top: -203px; width:100%; background: #fff;
+  display: none;}
+#footerArea .aList li{line-height:1.5em; border-bottom:1px solid #ccc; font-size: 0.95rem;}
+#footerArea .aList li a{display:block;text-align: center; padding: 5px 0; transition: all .3s;}
+#footerArea .aList li a:hover{color:#333; background: #ddd;}
+
+
+#footerArea .sns {font-size: 1.5rem; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 20px;
+  text-align: right;}
+#footerArea .top_move{width: 70px; height: 70px; border-radius: 50%;
+  background: #fff; box-shadow: 0 0 15px 1px rgba(0,0,0,.2);
+  position: fixed; left: 50%; margin-left: 770px; bottom: 100px;
+  display: none;}
+#footerArea .top_move span{display: block; text-align: center;
+  color: #00A1DE; font-size: 4rem; z-index: 50; transition: .3s;}
+#footerArea .top_move:hover{background: #00A1DE; transition: .3s;}
+#footerArea .top_move:hover span{color: #fff;}

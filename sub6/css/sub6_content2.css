@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* faq 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Frequently Asked Questions'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: hsl(34, 100%, 46%);}
+
+/* faq list */
+.con_inner{width: 1400px; margin: 0 auto;}
+.title_text p{z-index: 1;}
+.title_text{text-align: center; font-size: 1.2rem; color: #333; margin: 50px 0; position: relative;}
+.title_text::before{content: ''; width: 70px; height: 70px; border-radius: 50%; background: #A2AD00; z-index: -1; position: absolute; left: 450px; top: -30px;
+opacity: .3;}
+.title_text::after{content: ''; width: 50px; height: 50px; border-radius: 50%; background: #E98300; z-index: -1; position: absolute; left: 500px; top: -30px;
+opacity: .3;}
+
+.faq{width:1200px; border-bottom:1px solid #ddd;font-size:12px; margin: 50px auto;}  
+.faq .hgroup{position:relative;padding:0 0 50px 0; border-bottom: 1px solid #777;}  
+.faq .hgroup .all{position:absolute; top:5px; right:10px; color:#777; text-decoration:none; font-size: .9rem;
+transition: .3s;}  
+.faq .hgroup .all:hover{color: #333;}
+.faq ul{margin:0;padding:0;list-style:none}
+.faq .q{margin:0;border-top:1px solid #ddd; position: relative;}  
+.faq .q a.trigger{display:block;padding:25px 50px;background:#fafafa;color:#333;text-align:left;text-decoration:none ;
+font-size: 1.15rem;}  
+.faq .hide .q a.trigger{font-weight:normal;background:none;}  
+.faq .q a.trigger:hover,  
+.faq .q a.trigger:active,  
+.faq .q a.trigger:focus{background: #a1ad0023;color:#000} 
+.faq .q span{display: block; position: absolute; right: 15px; top:10px} 
+.faq .a{margin:0;padding:10px 50px;line-height:1.5;
+    padding-bottom:10px; margin: 10px 0;
+    padding-top:10px; display: none; font-size: 1rem;} 
+
+.faq .q a.trigger::before{content: 'Q.'; position: absolute; left: 10px; font-weight: 600; color: #A2AD00;}
+
+.alink{font-size: .9rem; color: #777; margin-left: 10px; transition: .3s;}
+.alink:hover{color: #333;}
+
+
+/* call */
+.call{width: 1200px; margin: 50px auto 100px auto; overflow: hidden;}
+.call h3{font-size: 1.2rem; margin-bottom: 10px;}
+.call_text{color: #808080; margin-bottom: 15px;}
+.call_number{color: #333; font-size: 2rem; font-weight: 700;}
+.call_inner{float: right; width: 600px;}
+.call img{float: left; margin-right: 40px; padding-left: 50px;}
+

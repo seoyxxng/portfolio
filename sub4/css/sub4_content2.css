@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* 사회공헌 페이지 내용영역 */
+.content_area{width: 100%; margin: 0 auto; overflow: hidden;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Volunteer Activity'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+.intro{width: 1400px; margin: 0 auto 100px auto; display: flex; justify-content: space-between;}
+.intro .intro_con{margin: 50px 0 0 150px; position: relative;}
+.intro_con p{font-size: 2rem; margin-bottom: 30px;}
+.intro_con p::before{content: ''; width: 200px; height: 2px; background: #333;
+position: absolute; left: 280px; top: 22px; z-index: -1;}
+
+.intro_con .count{font-size: 3.3rem; font-weight: 700; color: #000;}
+.intro_con .unit{font-size: 0.9rem;}
+.intro_con .unit_2{margin-left: 40px;}
+.intro_con .intro_cnt{margin-left: 20px;}
+
+.intro_img{width: 830px; height: 350px; background: url(../images/content2/intro.jpg);}
+.back{position: relative;}
+.back::before{content: ''; width: 1300px; height: 1020px; background: #f8f8f8;
+border-radius: 0 500px 500px 0; position: absolute; left: 0; top: -50px; z-index: -2;}
+/* con1 */
+.con1{width: 1400px; margin: 0 auto 50px auto; display: flex;}
+.con1_txt{padding: 10px 40px; position: relative;}
+.con1_txt dt{font-size: 1.5rem; font-weight: 500;}
+.con1_txt dt::before{content: ''; width: 400px; height: 1px; background: #333;
+position: absolute; left: 0; top: 90px;}
+.con1_txt dd{margin-top: 55px; text-align: justify;}
+.con1 ul{display: flex; gap: 10px; justify-content: space-evenly; margin-top: 60px;}
+
+/* con2 */
+.con2{width: 1400px; margin: 0 auto 50px auto; display: flex;}
+.con2_txt{padding: 10px 40px 10px 0; position: relative;}
+.con2_txt dt{font-size: 1.5rem; font-weight: 500;}
+.con2_txt dt::before{content: ''; width: 400px; height: 1px; background: #333;
+position: absolute; left: 0; top: 90px;}
+.con2_txt dd{margin-top: 55px; text-align: justify;}
+.con2 ul{display: flex; gap: 10px; justify-content: space-evenly; margin-top: 60px;}
+.con2_big{width: 700px; height: 441px; margin-right: 25px;}

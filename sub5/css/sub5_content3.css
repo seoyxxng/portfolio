@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* 복리후생 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Welfare Benefits'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+/* con1 */
+.con1{width: 1400px; margin: 50px auto;}
+.titlebox{display: flex; margin: 50px 0;}
+.titlebox h3{font-size: 2rem; font-weight: 800;}
+.titlebox .con1_title{margin: 0 55px;}
+.con1_subtitle{margin-top: 65px; color: #777;}
+
+
+.benefitnav{display: flex; justify-content: space-between; text-align: center; position: relative;}
+.benefitnav li{width: 31.111%;}
+.benefitnav li a{background: #fff; box-shadow: 2rem 2rem 4rem 0px rgba(0,0,0,.1);
+border-radius: 3rem; height: 435px; transition: all .4s ease-in-out;  position: relative;}
+.benefitnav dt{font-size: 2rem; padding-top: 150px; font-weight: 500; margin-bottom: 20px;}
+.benefitnav dd{color: #777;}
+.benefitnav img{position: absolute; left: 50%; bottom: -70px; transform: translateX(-50%);}
+
+.benefitnav li a:hover{border-radius: 50%; background: #E98300; box-shadow: none; color: #fff;}
+.benefitnav li a:hover dd, .benefitnav li a:hover dt{color: #fff;}
+
+.benefitnav .benefit_list{width: 1400px; margin: 0 auto;}
+.benefitnav .benefit_listbox{display: flex; justify-content: space-evenly;}
+.benefitnav .benefit_list dt{font-size: 1.2rem;}
+
+.list1{position: absolute; top: 450px;}
+.list2{display: block; position: absolute; left: 0; top: 450px; display: none;}
+.list2_2{position: absolute; left: 0; top: 180px; display: flex;}
+.list2_2 li{width: 350px;}
+.list3{position: absolute; left: 0; top: 450px; display: none;}
+
+/* con2 */
+.con2{width: 1400px; margin: 50px auto; padding-top: 400px;}
+.titlebox .con2_title{margin: 0 90px;}
+.con2_subtitle{margin-top: 65px; color: #777;}
+
+.con2_list{display: flex; justify-content: space-around;}
+.con2_list dl{display: flex; gap: 30px;}
+.con2_list dt{font-size: 1.3rem; font-weight: 500;}
+.con2_list dd{font-size: 1.1rem; margin-top: 2px;}
+.con2_list li{padding: 30px 0;}
+.con2_list ul:nth-of-type(2){margin-top: 27px;}

@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+/* 연혁 페이지 내용영역 */
+.content_area{width: 1400px; margin: 0 auto;}
+
+#content .title_area h2::before{content: 'History'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+#content .slideMenu ul{width: 800px; margin: 0 auto; display:flex; justify-content: center; list-style: none;}
+#content .slideMenu ul li{width: 20%;  text-align: center;}
+.slideMenu ul li a{padding: 13px 0; font-size: 1.2em;
+  color: #999;  transition: all .2s ease-out;}
+#content .slideMenu ul li a:hover:not(.spy){background: #e98400b9; color: #fff; font-weight: 500;
+border-radius: 20px;}
+
+#content .history{width: 1400px; height: 7050px; position: relative;}
+#content .history h3{font-size: 4rem; font-weight: 600; margin-top: 30px;}
+#content .history p{font-size: 1.1rem;}
+#content dl{margin-top: 60px;}
+#content dl dt{font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; position: relative;}
+#content dl dt dd{font-size: 1.1rem;}
+
+.navOn{position: fixed; width: 100%;
+        z-index:60; left:0; top: 0;}
+.slideMenu ul li a.spy{
+        background: #E98300; color:#fff; font-weight: 500; border-radius: 20px;}
+.slideMenu{background: #fff}   
+.slideMenu ul{width:1000px; margin: 0 auto; overflow: hidden}
+.slideMenu ul li{float: left; width:20%;
+    text-align: center}
+
+/* con1 */
+#content .con1::before{content: '';
+    display: block; width: 2px; height: 1200px;
+    position: absolute; left: 50%; top: 350px;
+    background: #E98300;}
+
+#content .con1{width: 1400px; position: relative; margin: 0 auto;}
+#content .con1 .title1{width: 1400px; height: 200px;
+  background: url(../images/content3/con1.jpg) 0 0 fixed no-repeat;
+  background-size: cover;
+  text-align: center; position: absolute;
+  left: 0; top: 100px; color: #fff;}
+
+#content .con1_history{padding-top: 400px; position: relative;}
+#content .con1_history li{position: relative;}
+#content .con1_history li:nth-child(odd){text-align: left; margin-left: 750px;}
+#content .con1_history li:nth-child(even){text-align: right; margin-right: 750px;}
+#content .con1_history li:nth-child(odd)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; left: -61px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+#content .con1_history li:nth-child(even)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; right: -63px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+
+#content .con1_history li:hover::after{background: #E98300;}
+#content .con1_history li dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: -3px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con1_history li:hover dt::before{width: 58px;}
+#content .con1_history li:nth-child(even) dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: 594px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con1_history li:hover dt::before{width: 58px;}
+
+/* con2 */
+#content .con2{width: 1400px;position: relative; margin: 0 auto;}
+#content .con2 .title2{width: 1400px; height: 200px;
+  background: url(../images/content3/con2.jpg) 0 0 fixed no-repeat;
+  background-size: cover;
+  text-align: center; position: absolute;
+  left: 0; top: 100px; color: #fff;}
+
+#content .con2::before{content: '';
+    display: block; width: 2px; height: 870px;
+    position: absolute; left: 50%; top: 350px;
+    background: #E98300;}
+
+#content .con2_history{padding-top: 400px; position: relative;}
+#content .con2_history li{position: relative;}
+#content .con2_history li:nth-child(odd){text-align: left; margin-left: 750px;}
+#content .con2_history li:nth-child(even){text-align: right; margin-right: 750px;}
+#content .con2_history li:nth-child(odd)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; left: -61px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+#content .con2_history li:nth-child(even)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; right: -63px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+
+#content .con2_history li:hover::after{background: #E98300;}
+#content .con2_history li dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: -3px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con2_history li:hover dt::before{width: 58px;}
+#content .con2_history li:nth-child(even) dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: 594px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con2_history li:hover dt::before{width: 58px;}
+
+/* con3 */
+#content .con3{width: 1400px;position: relative; margin: 0 auto;}
+#content .con3 .title3{width: 1400px; height: 200px;
+  background: url(../images/content3/con3.jpg) 0 0 fixed no-repeat;
+  background-size: cover;
+  text-align: center; position: absolute;
+  left: 0; top: 100px; color: #fff;}
+#content .con3::before{content: '';
+    display: block; width: 2px; height: 800px;
+    position: absolute; left: 50%; top: 350px;
+    background: #E98300;}
+
+#content .con3_history{padding-top: 400px; position: relative;}
+#content .con3_history li{position: relative;}
+#content .con3_history li:nth-child(odd){text-align: left; margin-left: 750px;}
+#content .con3_history li:nth-child(even){text-align: right; margin-right: 750px;}
+#content .con3_history li:nth-child(odd)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; left: -61px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+#content .con3_history li:nth-child(even)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; right: -63px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+
+#content .con3_history li:hover::after{background: #E98300;}
+#content .con3_history li dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: -3px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con3_history li:hover dt::before{width: 58px;}
+#content .con3_history li:nth-child(even) dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: 594px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con3_history li:hover dt::before{width: 58px;}
+
+/* con4 */
+#content .con4{width: 1400px;position: relative; margin: 0 auto;}
+#content .con4 .title4{width: 1400px; height: 200px;
+  background: url(../images/content3/con4.jpg) 0 0 fixed no-repeat;
+  background-size: cover;
+  text-align: center; position: absolute;
+  left: 0; top: 100px; color: #fff;}
+#content .con4::before{content: '';
+    display: block; width: 2px; height: 1130px;
+    position: absolute; left: 50%; top: 350px;
+    background: #E98300;}
+
+#content .con4_history{padding-top: 400px; position: relative;}
+#content .con4_history li{position: relative;}
+#content .con4_history li:nth-child(odd){text-align: left; margin-left: 750px;}
+#content .con4_history li:nth-child(even){text-align: right; margin-right: 750px;}
+#content .con4_history li:nth-child(odd)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; left: -61px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+#content .con4_history li:nth-child(even)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; right: -63px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+
+#content .con4_history li:hover::after{background: #E98300;}
+#content .con4_history li dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: -3px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con4_history li:hover dt::before{width: 58px;}
+#content .con4_history li:nth-child(even) dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: 594px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con4_history li:hover dt::before{width: 58px;}
+
+/* con5 */
+#content .con5{width: 1400px;position: relative; margin: 0 auto;}
+#content .con5 .title5{width: 1400px; height: 200px;
+  background: url(../images/content3/con5.jpg) 0 0 fixed no-repeat;
+  background-size: cover;
+  text-align: center; position: absolute;
+  left: 0; top: 100px; color: #fff;}
+#content .con5::before{content: '';
+    display: block; width: 2px; height: 1380px;
+    position: absolute; left: 50%; top: 350px;
+    background: #E98300;}
+
+#content .con5_history{padding-top: 400px; position: relative;}
+#content .con5_history li{position: relative;}
+#content .con5_history li:nth-child(odd){text-align: left; margin-left: 750px;}
+#content .con5_history li:nth-child(even){text-align: right; margin-right: 750px;}
+#content .con5_history li:nth-child(odd)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; left: -61px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+#content .con5_history li:nth-child(even)::after{content: ''; width: 20px; height: 20px; border-radius: 50%; background: #fff;
+position: absolute; right: -63px; top: 9px; border: 2px solid #E98300; transition: all .3s ease-out;}
+
+#content .con5_history li:hover::after{background: #E98300;}
+#content .con5_history li dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: -3px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con5_history li:hover dt::before{width: 58px;}
+#content .con5_history li:nth-child(even) dt::before{content: ''; display: block; width: 0px; height: 20px;
+  background: #E98300; opacity: .25; position: absolute; left: 594px; top: 7px;
+transition: all .3s ease-out; z-index: -1;}
+#content .con5_history li:hover dt::before{width: 58px;}

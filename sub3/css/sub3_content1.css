@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* 윤리경영 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Ethical management'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+.content_area{width: 1400px; margin: 0 auto;}
+.content_area .intro{margin: 45px 0;}
+.content_area .intro h3{margin-bottom: -5px; font-size: 2rem; font-weight: 700;}
+.content_area .intro strong{font-size: 2rem; font-weight: 700;}
+
+/* con1 */
+.con1{display: flex; flex-wrap: wrap; justify-content: space-between;
+  margin-top: 50px;}
+.con1>li{width: 680px; height: 280px; }
+.con1 .contop{border-top: 2px solid #333; border-bottom: 2px solid #333;
+  position: relative;}
+.con1 .conbtm{border-bottom: 2px solid #333; position: relative;}
+
+.con1 dl dt{font-size: 1.8rem; font-weight: 700; margin-top: 75px;}
+.con1 dl dd{text-align: justify; margin-top: 15px;}
+
+.con1 .down{display: flex; flex-wrap: wrap;}
+.con1 .down li a{width: 339px; height: 139px; text-align: center; line-height: 8rem;
+  font-size: 1.2rem; font-weight: 600;}
+.con1 .down li a:hover{background: #eee;}
+.con1 .down .down1{border-bottom: 1px solid #C5C5C5; border-right: 1px solid #C5C5C5;}
+.con1 .down .down2{border-bottom: 1px solid #C5C5C5;}
+.con1 .down .down3{border-right: 1px solid #C5C5C5;}
+
+.con1 .top1::before{content: '1'; width: 40px; height: 40px; border-radius: 50%;
+  background: #333; color: #fff; text-align: center;
+  position: absolute; right: 0; top: 22px; font-size: 1.3rem; font-weight: 700; line-height: 2.3rem;}
+.con1 .top2::before{content: '2'; width: 40px; height: 40px; border-radius: 50%;
+  background: #333; color: #fff; text-align: center;
+  position: absolute; right: 0; top: 22px; font-size: 1.3rem; font-weight: 700; line-height: 2.3rem;}
+.con1 .btm1::before{content: '3'; width: 40px; height: 40px; border-radius: 50%;
+  background: #333; color: #fff; text-align: center;
+  position: absolute; right: 0; top: 22px; font-size: 1.3rem; font-weight: 700; line-height: 2.3rem;}
+.con1 .btm2::before{content: ''; width: 40px; height: 40px; border-radius: 50%;
+  background: #333; color: #fff; text-align: center;
+  position: absolute; right: 0; top: 22px; font-size: 1.3rem; font-weight: 700; line-height: 2.3rem;}
+.con1 .btm2 svg{position: absolute; right: 5px; top: 25px;}
+
+/* con2 */
+.con2{display: flex; justify-content: center; gap: 20px; margin: 100px 0;}
+.con2 li{position: relative;}
+.con2 li p{font-size: 1.4rem; font-weight: 600; text-align: center; margin-bottom: 20px;}
+.con2 li p::before{content: ''; width: 0; height: 30px; position: absolute; left: 135px; top: 2px;
+  transition: all .5s ease-out; z-index: -1;}
+.con2 li:hover p::before{width: 130px; height: 30px; background: #EEFF71;}
+.con2 li img{transition: all .3s ease-out;}
+.con2 li:hover img{border-radius: 30px;}

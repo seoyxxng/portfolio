@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* 경영정신 페이지 내용영역 */
+.content_area{width: 1400px; margin: 0 auto;}
+
+#content .title_area h2::before{content: 'Philosophy'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+
+
+#content .content_area .intro{width: 1400px; margin-top: 50px;
+  display: flex; justify-content: center; position: relative;}
+#content .intro p{font-size: 2.8rem; font-weight: 600; position: relative;}
+#content .intro p:nth-of-type(1){position: absolute; left: 200px; top: 300px;}
+#content .intro p:nth-of-type(1):before{content: ''; width: 170px; height: 25px;
+  background: #FF42A4; opacity: .4; position: absolute; left: -2px; top:40px;
+  z-index: -10;}
+#content .intro p:nth-of-type(2){position: absolute; right: 120px; top: 400px;}
+
+#content .intro_2{font-size: 1.2rem; text-align: center; margin-top: 100px;}
+
+#content .culture{margin: 150px 0;}
+#content .culture h3{font-size: 1.8rem; font-weight: 500; margin-bottom: 25px;}
+#content .culture_box{display: flex; gap: 50px; align-items: center;}
+#content .culture_box img {box-shadow: 15px 15px 0 5px rgba(0,0,0,.1);}
+#content .culture_right strong{font-size: 1.2rem; position: relative; font-weight: 500;}
+#content .culture_right strong::before{content: ''; width: 520px; height: 15px;
+  background: #E98300; opacity: .15; position: absolute; left: 0; bottom: 0;
+  z-index: -10;}
+#content .culture_right p{margin-top: 50px; font-size: 1.1rem; line-height: 1.7rem;}

@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* 사회공헌 페이지 내용영역 */
+.content_area{width: 100%; margin: 0 auto; overflow: hidden;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Corporate Social Responsibility'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+#content .intro{position: relative; height: 600px; margin: 40px auto 0 auto; width: 2000px;}
+#content .intro .intro_img{width: 2000px; height: 465px; background: url(../images/content3/intro.jpg)no-repeat;
+}
+
+.top_con{width: 1600px; height: 120px; background: #fff; display: flex; position: absolute; left: 160px; bottom: 80px;
+justify-content: space-between;}
+.top_con h3{font-size: 2rem; margin-top: 50px; padding-left: 120px;}
+.top_con p{color: #777; margin: 50px 120px 0 0;}
+
+/* con1 */
+.con1_box{width: 1400px; margin: 0 auto; text-align: justify; height: 450px;}
+.con1_box .con1{display: flex; justify-content: space-between}
+.con1>li{width: 360px; height: 295px; background: #f8f8f8; padding: 40px}
+.con1 span{font-size: 1.3rem; font-weight: 800; color: #00A1DE;}
+.con1 p{font-size: 1.4rem; font-weight: 500; margin-top: 10px;}
+.con1_inner{margin: 30px 0 0 15px;}
+.con1_inner li{margin-top: 5px; position: relative;}
+.con1_inner li::before{content: ''; width: 5px; height: 5px; border-radius: 50%;
+background: #333; position: absolute; left: -12px; top: 10px;}
+
+.box1, .box2, .box3{position: relative;}
+.box1::after{content: ''; background: url(../images/content3/icon1.png);
+width: 80px; height: 80px; position: absolute; right: 40px; top: 50px;}
+.box2::after{content: ''; background: url(../images/content3/icon2.png);
+width: 80px; height: 80px; position: absolute; right: 40px; top: 50px;}
+.box3::after{content: ''; background: url(../images/content3/icon3.png);
+width: 80px; height: 80px; position: absolute; right: 40px; top: 50px;}
+
+/* con2 */
+.con2{width: 1400px; margin: 0 auto; display: flex; margin-bottom: 50px;}
+.con2_inner{display: flex; margin-left: 180px;}
+.con2_inner:not(.con2_inner:nth-of-type(1)){margin-top: 80px;}
+.con2 dl{width: 450px; margin-right: 20px;}
+.con2 dl dt{font-size: 1.3rem; margin-bottom: 10px; font-weight: 500;}
+.con2 dl dd{color: #777; text-align: justify;}
+.sticky{width: 150px; font-size: 1.3rem; text-align: center;
+border-top: 3px solid #333; padding-top: 20px;}
+.sticky_box{width: 150px;}
+.sticky.on{position: fixed; top: 95px; color: #E98300; border-top: 3px solid #E98300;}
+.con2 .swiper-container{width: 600px; height: 180px;}
+.con2 .swiper-slide{width: 180px;}
+
+.con2 .swiper-container .swiper-button-next{color: #fff;}
+.con2 .swiper-container .swiper-button-prev{color: #fff;}

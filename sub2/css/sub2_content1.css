@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 사업영역 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Information technology'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+#content .con1{width: 1400px; position: relative; margin: 50px auto;}
+#content .con1_img{width: 2000px; height: 600px; background: url(../images/content1/main.jpg)no-repeat;
+margin: 70px auto;}
+#content .con1 h3{font-size: 2.8rem; margin-bottom: 20px;}
+#content .con1 p{font-size: 1.2rem;}
+
+#content .con2{width: 1400px; margin: 0 auto;}
+#content .con2 h3{font-size: 1.6rem; text-align: center;}
+#content .con2 ul{width: 900px; height: 200px; display: flex; text-align: center;
+  margin: 35px auto; gap: 10px;}
+#content .con2 ul li{width: 300px; background: #f1f1f1; padding-top: 50px; border-radius: 100px;}
+#content .con2 ul li .count{font-size: 3.3rem; font-weight: 700; color: #000;}
+#content .con2 ul li .unit{font-size: 0.9rem;}
+
+#content .con3{width: 1400px; margin: 70px auto 130px auto; position: relative;}
+#content .con3 strong{font-size: 1.6rem;}
+#content .con3 p{margin-top: 30px; color: #666;}
+#content .con3::after{content: ''; width: 1400px; height: 2px;
+  background: #666; opacity: .2;
+  position: absolute; left: 0; top: 180px;}
+
+#content .con4{width: 1400px; margin: 70px auto;}
+#content .con4_intro{margin-left: 60px; position: relative;}
+#content .con4 h3{font-size: 1.6rem; margin-bottom: 30px;}
+#content .con4 h3::after{content: ''; width: 0; transition: all 1s ease-out;}
+#content .con4 h3::before{content: ''; left: 480px; transition: all 1s ease-out;}
+#content .con4:hover h3::after{content: ''; width: 130px; height: 2px; background: #E98300;
+  position: absolute; left: 480px; top: 20px;}
+#content .con4:hover h3::before{content: ''; width: 10px; height: 10px; background: #E98300;
+  border-radius: 50%;
+  position: absolute; left: 600px; top: 15px;}
+
+#content .con4 .con4_box{margin-top: 50px; display: flex; justify-content:space-evenly;
+  color: #fff;}
+#content .con4 .con4_box>li{width: 400px; height: 500px; border-radius: 20px;}
+#content .con4_box .box1{background: url(../images/content1/con4_1.jpg);}
+#content .con4_box .box2{background: url(../images/content1/con4_2.jpg);}
+#content .con4_box .box3{background: url(../images/content1/con4_3.jpg);}
+
+#content .con4_box .inner{width: 350px; height: 400px; padding: 70px 50px 0 50px;}
+#content .con4_box .inner h4{font-size: 2.2rem; font-weight: 700; margin-bottom: 10px;}
+#content .con4_box .inner p{font-size: 1.1rem;}
+#content .con4_box .box_list{margin-top: 30px; line-height: 2rem;}

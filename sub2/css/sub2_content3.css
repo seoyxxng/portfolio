@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 사업영역 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Leisure'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+#content .con1{width: 1400px; position: relative; margin: 50px auto;}
+#content .con1_img{width: 2000px; height: 600px; background: url(../images/content3/main1.jpg)no-repeat;
+margin: 70px auto;}
+#content .con1 h3{font-size: 2.8rem; margin-bottom: 20px;}
+#content .con1 p{font-size: 1.2rem;}
+
+#content .tabmenu{width: 1400px; margin: 20px auto; position: relative;
+padding: 30px 0;}
+#content .tab{font-size: 1.2rem; font-weight: 500;}
+#content .tab::after{content: ''; width: 600px; height: 1px;
+background: #D9D9D9; position: absolute; left: -170px; bottom: 0;}
+#content .contop{display: flex; margin-top: 100px; position: relative;}
+#content .top2{flex-direction: row-reverse;}
+.tabmenu .tab{width: 200px; font-size: 1.25rem; text-align: center; 
+  position: absolute; left: 0; top: 0; padding: 15px 0; }
+.tabmenu .t1{left:500px;}
+.tabmenu .t2{left:700px;}
+#content .contop .con1{font-size: 1.8rem; font-weight: 500; text-align: right;
+padding: 170px 10px 0 0;}
+#content .contop .con1::before{content: ''; width: 112px; height: 39px;
+  background: url(../images/content3/ci1.jpg);
+  position: absolute; right: 10px; top: 120px;}
+#content .contop .con2::before{content: ''; width: 101px; height: 50px;
+  background: url(../images/content3/ci2.jpg);
+  position: absolute; left: 0; top: 140px;}
+#content .contop .con2{font-size: 1.8rem; font-weight: 500; text-align: left;
+padding: 200px 200px 0 0; position: absolute; left: 0; top: 0;}
+#content .btm{margin-top: 40px;}
+#content .btm p{margin-top: 20px; text-align: justify;}
+#content .btm strong{font-size: 1.5rem; font-weight: 600;}

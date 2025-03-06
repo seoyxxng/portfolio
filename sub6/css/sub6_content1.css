@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Business and Human Rights'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+
+/* intro */
+.intro{width: 1400px; margin: 30px auto; display: flex; gap: 40px;}
+.intro .intro_title{font-size: 2rem; font-weight: 500; position: relative; margin: 100px 0 20px 0;}
+.intro .intro_title::before{content: ''; width: 0; height: 100%; background: rgba(233,133,0,.3);
+position: absolute; left: 0; z-index: -1; transition: 1s;}
+.intro:hover .intro_title::before{width: 73%; height: 100%;}
+.intro img{border-radius: 300px 180px 200px 200px;}
+
+/* con2 */
+.con2{width: 1400px; margin: 100px auto;}
+.con2 .circlebox{width: 600px; height: 600px; border-radius: 50%;
+  border: 5px dashed #ddd;}
+.circle{display: flex; gap: 50px;}
+.con2_r .con2_title{font-size: 2rem; margin: 170px 0 30px 0;}
+.con2_r .con2_con{color: #606060; text-align: justify;}
+.con2_l{position: relative;}
+.con2_l a{border-radius: 50%;}
+.con2_l a img{border-radius: 50%; transition: all .2s;}
+.con2_l a:hover img{transform: scale(.9);}
+.con2_l a:nth-of-type(1){position: absolute; left: -10px; top: 75px;}
+.con2_l a:nth-of-type(2){position: absolute; right: -10px; top: 70px;}
+.con2_l a:nth-of-type(3){position: absolute; left: -10px; top: 360px;}
+.con2_l a:nth-of-type(4){position: absolute; right: -20px; top: 350px;}
+
+.circle_con{position: absolute; left: 50%; top: 230px; transform: translateX(-50%); display: none;}
+.circle_con h3{font-size: 1.8rem; font-weight: 500; text-align: center; margin-bottom: 10px;}
+.circle_con p{font-size: 1.2rem; text-align: center;}
+
+.current{display: block;}
+
+/* con3 */
+.con3{width: 1400px; margin: 0 auto 50px auto;}
+.con3_box{display: flex; gap: 50px;}
+.con3 h3{font-size: 2rem; margin: 20px 0; font-weight: 500;}
+.con3 p{margin-bottom: 20px;}
+.con3_r{margin: 60px 0 0 100px;}
+dl{margin-bottom: 30px; position: relative;}
+dt{font-size: 1.3rem; font-weight: 500; margin-bottom: 10px;}
+
+.con3_1::before{content: '1'; font-size: 2rem; font-weight: 600;
+  color: #E98300; position: absolute; left: -40px; top: -7px;}
+.con3_2::before{content: '2'; font-size: 2rem; font-weight: 600;
+  color: #00A1DE; position: absolute; left: -40px; top: -7px;}
+.con3_3::before{content: '3'; font-size: 2rem; font-weight: 600;
+  color: #A2AD00; position: absolute; left: -40px; top: -7px;}
+
+.con3_1 dt::after{content: ''; width: 0; height: 30px; background: #E98300; position: absolute; left: 0; z-index: -1; opacity: .3; transition: .3s;}
+.con3_1:hover dt::after{width: 165px;}
+.con3_2 dt::after{content: ''; width: 0; height: 30px; background: #00A1DE; position: absolute; left: 0; z-index: -1; opacity: .3; transition: .3s;}
+.con3_2:hover dt::after{width: 165px;}
+.con3_3 dt::after{content: ''; width: 0; height: 30px; background: #A2AD00; position: absolute; left: 0; z-index: -1; opacity: .3; transition: .3s;}
+.con3_3:hover dt::after{width: 165px;}

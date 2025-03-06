@@ -1,0 +1,277 @@
+<?
+    session_start();
+    @extract($_GET);
+    @extract($_POST);
+    @extract($_SESSION);
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웅진그룹</title>
+  <link rel="shortcut icon" type="image/x-icon"  href="./favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./common/css/aos.css">
+  <link rel="stylesheet" href="./common/css/common.css">
+  <link rel="stylesheet" href="./maincss/mainlayout.css">
+</head>
+<body>
+  <div class="skipNav">
+    <a href="#content">본문 바로가기</a>
+    <a href="#gnb">글로벌 네비게이션 바로가기</a>
+  </div>
+
+  <div class="wrap">
+    <? include "./common/main_header.html" ?>
+
+    <div class="sub_visual">
+      <div class="gallery">
+        <ul>
+          <li class="link1"><img src="./images/visual1.jpg" alt='' ><span>Love again and again</span>
+            <span>또또사랑으로 따듯한 세상을 만듭니다.</span></li>
+          <li class="link2"><img src="./images/visual2.jpg" alt='' ><span>Challenges and changes</span>
+            <span>도전과 변화를 통해 시장을 선도해 나가는 기업이 되겠습니다.</span></li>
+          <li class="link3"><img src="./images/visual3.jpg" alt='' ><span>Positive Mindset</span>
+            <span>웅진의 창의, 혁신, 도전은 긍정적인 사고방식으로부터 시작됩니다.</span></li>
+        </ul>
+      </div>
+
+      <div class="dock">
+            <span class="mbutton  btn1" ></span>
+            <span class="mbutton  btn2" ></span>
+            <span class="mbutton  btn3" ></span>
+            <span class="ps" ><span class="hidden">stop</span><i class="fa-regular fa-circle-pause"></i></span>
+      </div>
+
+      <span class="btn btnLeft"><span class="hidden">left</span><i class="fa-solid fa-angle-left"></i></span>
+      <span class="btn btnRight"><span class="hidden">right</span><i class="fa-solid fa-angle-right"></i></span>
+      </div> 
+
+    <article id="content">
+      <h2 class="hidden">본문컨텐츠영역</h2>
+      <section data-aos="fade-up" class="business">
+        <h3>사업영역</h3>
+        <p data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">어제보다 더 나은 오늘, 오늘보다 더 큰 내일 웅진이 만들어갑니다.</p>
+        <ul data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+          <li class="business_inner1 current">
+              <img src="./images/content1.jpg" alt="">
+              <div>
+                <h4>IT</h4>
+                  <p>디지털 혁신의 중심에 웅진이 있습니다.<br>
+                  IT서비스로 디지털 혁신을 이루고,<br>
+                  기업 고객의 성공적인 미래가치창출을 이루기 위해 함께하겠습니다.</p>
+                <a class="business_more" href="./sub2/sub2_1.html"><i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+              <span class="buttonMenu01"></span>
+            </li>
+            <li class="business_inner2">
+                <img src="./images/content2.jpg" alt="">
+                <div>
+                  <h4>교육출판</h4>
+                    <p>아이들을 위해 10년 앞을 생각합니다.<br>
+                    웅진은 어린이부터 성인까지 모든 연령대를 대상으로<br>
+                    다양한 장르의 콘텐츠를 개발하여 한국의 출판 시장을 선도하고 있습니다.</p>
+                  <a class="business_more" href="./sub2/sub2_2.html"><i class="fa-solid fa-chevron-right"></i></a>
+                  </div> 
+                  <span class="buttonMenu02"></span>
+            </li>
+            <li class="business_inner3">
+                <img src="./images/content3.jpg" alt="">
+                <div>
+                  <h4>레저</h4>
+                    <p>뛰어난 자연비경을 즐길 수 있는 5대 명문 컨트리클럽과<br>
+                    국내 최고 가족형 복합레저 테마파크까지,<br>
+                    웅진의 레저산업을 소개합니다.</p>
+                  <a class="business_more" href="./sub2/sub2_3.html"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <span class="buttonMenu03"></span>
+            </li>
+            <li class="business_inner4">
+                <img src="./images/content4.jpg" alt="">
+                <div>
+                  <h4>화장품 건강식품</h4>
+                    <p>웅진은 건강하고 아름다운 삶의 패러다임을 제시합니다.<br>
+                    바이럴 마케팅, 네트워크 보상플랜, 온라인 쇼핑몰을 결합한 새로운 모델을 통해<br>
+                    소비자와 사업자를 만족시키고 새로운 가치를 만들겠습니다.</p>
+                  <a class="business_more" href="./sub2/sub2_4.html"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <span class="buttonMenu04"></span>
+            </li>
+        </ul>
+      </section>
+      <section class="management">
+        <h3 data-aos="fade-down" data-aos-duration="300">지속가능경영</h3>
+        <div class="management_inner">
+          <div class="management_content">
+            <div class="management_left" data-aos="fade-right" data-aos-duration="400">
+              <img src="./images/management1.jpg" alt="">
+            </div>
+            <div class="management_right" data-aos="fade-down" data-aos-duration="400">
+              <ul>
+                <li class="article hide">
+                  <a href="./sub3/sub3_1.html">
+                  <h4 class="trigger">윤리경영</h4>
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <div class="inner">
+                  <span>Ethical Management</span>
+                    <p>웅진은 창업 초기부터 공정하고 투명한 경영 활동을 
+                    기업 경영의 제1원칙으로 삼아 왔으며, 
+                    경영정신인 ‘또또사랑’을 바탕으로 윤리경영을 지속적으로 실천하고있습니다.</p>
+                  </div>
+                  <i class="fa-solid fa-scale-balanced back"></i>
+                  </a>
+                </li>
+                <li class="article hide">
+                  <a href="./sub3/sub3_2.html">
+                  <h4 class="trigger">환경경영</h4>
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <div class="inner">
+                  <span>Environmental Management</span>
+                  <p>환경경영을 통해 지속가능한 미래를 만들어갑니다.
+                  웅진그룹은 ‘사랑은 뜨겁게, 지구는 차갑게’라는 환경경영 슬로건 아래
+                  임직원들과 함께 지속적인 환경보호 활동을 진행하고 있습니다.</p>
+                  </div>
+                  <i class="fa-solid fa-earth-americas back"></i>
+                  </a>
+                </li>
+                <li class="article hide">
+                  <a href="./sub3/sub3_3.html">
+                  <h4 class="trigger">인권경영</h4>
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <div class="inner">
+                  <span>Human rights Management</span>
+                  <p>모든 구성원의 다양성을 존중하며, 성별, 국적, 나이, 장애, 종교 등 다름을 이유로
+                  차별이나 불이익을 받지 않도록 상호 존중과 배려의 조직문화를 추구하고 있습니다.</p>
+                  </div>
+                  <i class="fa-solid fa-user-group back"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social">
+        <h3 data-aos="fade-down" data-aos-duration="300">사회공헌</h3>
+        <div class="social_inner">
+          <div class="social_menu" data-aos="fade-left" data-aos-duration="400">
+            <ul>
+                <li>
+                  <h4>학습결손지원</h4>
+                </li>
+                <li>
+                    <h4>봉사활동</h4>
+                </li>
+                <li>
+                    <h4>사회공헌활동</h4>
+                </li>
+                <li>
+                  <h4>웅진재단후원</h4>
+                </li>
+            </ul>
+          </div>
+                <div class="social_bottom">
+                  <div class="social_left" data-aos="fade-right" data-aos-duration="500">
+                    <dl class="current">
+                      <dt class="title">학습결손지원</dt>
+                      <dd class="main_t">웅진은 어린이를 대상으로 한 교육문화 부분에 대해 
+                      사회공헌활동을 진행하고 있습니다. 교육으로 키우는 새로운 희망, 
+                      웅진이 앞장서겠습니다.</dd>
+                      <dd>
+                        <a class="social_more" href="./sub4/sub4_1.html">더보기</a>
+                      </dd>
+                    </dl>
+                  </div>
+                    <div class="social_right" data-aos="fade-left" data-aos-duration="500">
+                      <img src="./images/social1.jpg" alt="">
+                    </div>
+                </div>
+        <div class="social_back">
+          <p>WOONGJIN</p>
+        </div>
+        </div>
+      </section>
+      <section class="notice">
+        <? include "./lib/func.php" ?>
+        <div class="notice_inner">
+          <h3 data-aos="fade-up" data-aos-duration="500">공지사항</h3>
+          <p data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">웅진의 다양한 소식을 전해드립니다.</p>
+          <a class="more" href="./notice/list.php" data-aos="fade-zoom-in" data-aos-delay="500">더보기</a>
+          <div class="notice_content" data-aos="fade-zoom-in" data-aos-delay="500">
+            <ul>
+              <? latest_article("notice", 4, 40, 70); ?>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+      <section class="recruit">
+        <h3 data-aos="fade-in" data-aos-duration="500">인재채용</h3>
+        <div class="recruit_img">
+          <img src="./images/recruit.jpg" alt="">
+        </div>
+        <p data-aos="fade-in" data-aos-duration="500">Think Together, Thinkbig</p>
+        <span data-aos="fade-in" data-aos-duration="500">사람 또 사람, 그리고 사랑 그 놀라운 힘을 믿습니다.</span>
+        
+        <div class="recruit_box" data-aos="fade-in" data-aos-duration="500">
+          <ul>
+            <li>
+              <a href="./sub5/sub5_1.html"><i class="fa-solid fa-user-tie"></i>
+                <h4>인재상</h4>
+              </a></li>
+            <li>
+              <a href="./sub5/sub5_3.html"><i class="fa-solid fa-hand-holding-heart"></i>
+                <h4>복리후생</h4>
+              </a></li>
+            <li>
+              <a href="./sub5/sub5_2.html"><i class="fa-solid fa-briefcase"></i>
+                <h4>입사지원</h4>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+    </article>
+    
+    <? include "./common/main_footer.html" ?>
+
+  </div>
+
+  <script src="./mainjs/mainpopup.js"></script>
+  <!-- 메인 공지 팝업 -->
+  <div id="showimage" style="z-index:90;position:absolute;width:322px;left:50%;top:250px;margin-left: 550px;">
+    <script>
+      function closeWin(){
+        var chk = document.getElementById('Notice')
+        if (chk.checked) {
+          setCookie("Notice", "done" , 1); //1이란 숫자는 1일간 안보임을 뜻합니다. 날짜는 자신에 맞게 수정하세요
+        }
+      }
+    if ( getCookie("Notice") == "done" ){
+      hidebox();
+    }
+    </script>
+      <div>
+        <img src="./images/pop.png" alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다.">
+      </div>
+      <div style="font-size:12px;text-align:center;color:#fff;">
+        <input type="checkbox" name="Notice" id="Notice" value="" title="오늘은 이창을 열지 않음 선택상자"><label for="Notice">오늘은 이창을 열지 않음.</label>
+      <a href="#"  onclick="closeWin();hidebox();return false;" style="color:#fff;"> [close] </a>
+    </div>
+  </div>
+
+  
+
+  
+  <script src="./common/js/aos.js"></script>
+  
+  <script src="./common/js/jquery-1.12.4.min.js"></script>
+  <script src="./common/js/jquery-migrate-1.4.1.min.js"></script>
+  <script src="./common/js/jquery.easing.1.3.js"></script>
+  <script src="./common/js/common.js"></script>
+  <script src="./mainjs/mainjs.js"></script>
+</body>
+</html>

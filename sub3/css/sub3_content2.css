@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 환경경영 페이지 내용영역 */
+.content_area{width: 100%; overflow: hidden; margin: 0 auto;}
+#content .title_area {height: 400px;}
+#content .title_area h2::before{content: 'Environmental Management'; display: block; width: 100%;
+  position: absolute; font-size: 1rem; font-weight: 400; text-align: center;
+  top: 150px; color: #E98300;}
+
+.content_area{width: 1400px; margin: 0 auto;}
+
+.intro{display: flex;}
+.intro h3{font-size: 2rem; text-align: center; font-weight: 700;}
+.intro .red{color: #FF4E4E;}
+.intro .blue{color: #118CFF;}
+.intro .intro_right{padding-top:50px; width: 680px;}
+.intro p{text-align: justify; margin-top: 30px; font-size: 1.1rem;}
+
+/* con1 */
+.con1{display: flex; justify-content: space-evenly; margin-top: 80px;}
+.con1 li{width: 300px; height: 280px; text-align: center; padding-top: 30px;}
+.con1 .box1{border: 2px solid #00A1DE;}
+.con1 .box1 p{font-size: 1.3rem; font-weight: 600; color: #00A1DE;}
+.con1 .box1 dt{font-size: 1.5rem; font-weight: 900; color: #00A1DE; margin-top: 10px;}
+.con1 .box1 dd:nth-child(2){width: 250px; height: 30px; background: #00A1DE;
+color: #fff; border-radius: 20px; margin: 20px 0 0 25px;}
+.con1 .box1 dd:nth-child(3){margin-top: 20px; padding: 0 10px; text-align: justify;}
+
+.con1 .box2{border: 2px solid #E98300;}
+.con1 .box2 p{font-size: 1.3rem; font-weight: 600; color: #E98300;}
+.con1 .box2 dt{font-size: 1.5rem; font-weight: 900; color: #E98300; margin-top: 10px;}
+.con1 .box2 dd:nth-child(2){width: 250px; height: 30px; background: #E98300;
+color: #fff; border-radius: 20px; margin: 20px 0 0 25px;}
+.con1 .box2 dd:nth-child(3){margin-top: 20px; padding: 0 10px; text-align: justify;}
+
+.con1 .box3{border: 2px solid #A2AD00;}
+.con1 .box3 p{font-size: 1.3rem; font-weight: 600; color: #A2AD00;}
+.con1 .box3 dt{font-size: 1.5rem; font-weight: 900; color: #A2AD00; margin-top: 10px;}
+.con1 .box3 dd:nth-child(2){width: 250px; height: 30px; background: #A2AD00;
+color: #fff; border-radius: 20px; margin: 20px 0 0 25px;}
+.con1 .box3 dd:nth-child(3){margin-top: 20px; padding: 0 10px; text-align: justify;}
+
+.con1 .box4{border: 2px solid #333;}
+.con1 .box4 p{font-size: 1.3rem; font-weight: 600; color: #333;}
+.con1 .box4 dt{font-size: 1.5rem; font-weight: 900; color: #333; margin-top: 10px;}
+.con1 .box4 dd:nth-child(2){width: 250px; height: 30px; background: #333;
+color: #fff; border-radius: 20px; margin: 20px 0 0 25px;}
+.con1 .box4 dd:nth-child(3){margin-top: 20px; padding: 0 10px; text-align: justify;}
+
+/* con2 */
+.con2{margin-top: 100px;}
+.con2 dt{font-size: 1.5rem; font-weight: 700; margin-bottom: 20px}
+.con2 dd{margin: 20px 0; text-align: justify;}
+
+.con2 .con_top{display: flex; justify-content: space-between;}
+.con2 .con_top dl{padding: 20px 0;}
+.con2 .con_top li{width: 680px;}
+.con2 .con_top dl{border-top: 2px solid #333;}
+
+.con2 .con_btm{display: flex; justify-content: space-between;
+border-top: 2px solid #333; padding-top: 60px; margin-bottom: 100px;}
+.con2 .con_btm dl{padding-top: 60px;}
+.con2 .con_btm .left{width: 680px;}
+
+
+
+.con2 .swiper-container{width: 680px;}
+.con2 .swiper-button-next,
+.con2 .swiper-button-prev{color: #fff; transition: all .3s;}
+.con2 .swiper-button-next:hover{color: #333;}
+.con2 .swiper-button-prev:hover{color: #333;}

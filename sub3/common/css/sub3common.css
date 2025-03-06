@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* 비주얼 공통 */
+.sub_visual{width: 2000px; height: 400px; background: url(../images/visual.jpg);
+  position: relative; left: 50%; top: 0; transform: translateX(-50%);}
+.sub_visual strong{font-size: 33px; color: #fff;
+  position: absolute; width: 100%; text-align: center;
+  top: 200px; left: 0; font-weight: normal; letter-spacing: 5px;}
+
+/* 서브네비 공통 */
+.sub_nav{width: 100%; border-bottom: 1px solid #ccc;}
+.sub_nav ul{width: 900px; margin: 0 auto; background: #fff;
+  display: flex; }
+.sub_nav ul li{width: 33.3333%; text-align: center; box-sizing: border-box;}
+.sub_nav ul li a{font-size: 1.3rem; font-weight: 500;
+  padding: 20px 0; color: #666;}
+.sub_nav ul li a.current{background: #E98300; color: #fff;}
+
+/* title_area 공통 */
+#content{width: 100%;}
+#content .title_area {height: 400px;}
+#content .title_area{width: 1400px; margin: 0 auto;
+  position: relative; overflow: hidden;}
+#content .title_area .line_map{position: absolute; right: 15px; top: 25px;
+  color: #777;}
+#content .title_area h2{font-size: 55px; font-weight: 600; text-align: center;
+  padding-top: 180px;}
+#content .title_area h2::after{content: ''; display: block;
+  width: 150px; height: 2px;
+  position: absolute; left:50%; top: 330px;
+  background: #ccc; opacity: .5; transform: translateX(-50%);}
+
