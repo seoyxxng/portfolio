@@ -1,0 +1,121 @@
+/* 와이드 pc  */
+
+	
+.videoBox{width:100%;height:100%; overflow:hidden; position:absolute}
+
+#imgBG{
+	position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+    left:50%;
+    top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+    width:auto;
+    min-width:100%; /*동영상 너비를 꽉차게*/
+    height:auto;
+    min-height:100%; /*동영상 높이를 꽉차게*/
+    transform:translateX(-50%) translateY(-50%);
+    z-index:-100;
+}
+
+
+	
+#content{ width:100%; margin:0 auto; background:rgba(0,0,0,.6);position: relative; padding-bottom: 100px;}
+#content h2{position: absolute; top: -500px;
+width: 100%; text-align: center; font-size: 4em; color: #fff;}
+
+
+.movies {perspective: 1000px;}
+.movies span {
+display: inline-block;
+transform-origin: 50% 50% -25px;
+transform-style: preserve-3d;
+animation: intro 1.6s;
+text-shadow: 1px 1px 5px #000;
+font-family: 'Anton SC';
+}
+.movies span:nth-child(2) {
+animation-delay: .1s;
+}
+.movies span:nth-child(3) {
+animation-delay: .2s;
+}
+.movies span:nth-child(4) {
+animation-delay: .3s;
+}
+.movies span:nth-child(5) {
+animation-delay: .4s;
+}
+.movies span:nth-child(6) {
+animation-delay: .5s;
+}
+.movies span:nth-child(7) {
+animation-delay: .6s;
+}
+@keyframes intro {
+0% {
+   transform: rotateX(-360deg);
+}
+70% {
+   transform: rotateX(0);
+}
+}
+
+h4{text-align: center; padding: 50px 0; font-size: 2rem;
+transition: all .5s;}
+h4:hover span{background: #ED1D24; padding: 0 5px;}
+h4:hover{letter-spacing: 3px;}
+h4 br{display: none;}
+
+.gallerybox{width: 100%; padding: 0 2.5%;}
+.grid-image-item,.grid-sizer {width: 25%; height: auto;}
+.grid-image-item {
+  float: left;
+  padding: 10px;
+}
+.grid-image-item img{
+    border-radius: 3%;
+    display: block;
+    width: 100%; margin: 10px auto;
+    transition: all .5s;
+}
+.grid-image-item:hover img{
+  transform: scale(1.03);
+  box-shadow: 0 0 8px 5px #ED1D24;
+}
+
+
+@media screen and (max-width:1440px) {
+h4 br{display: block;}
+
+}
+
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+
+
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+.grid-image-item,.grid-sizer {width: 33.333%;}
+
+h4{font-size: 1.8rem;}
+h4:hover{letter-spacing: 0;}
+
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+.grid-image-item,.grid-sizer {width: 50%;}
+
+h4 span{background: #ED1D24;}
+h4:hover span{padding: 0 0;}
+h4:hover{letter-spacing: 1px;}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+.grid-image-item,.grid-sizer {width: 100%;}
+h4{font-size: 1.5rem;}
+}

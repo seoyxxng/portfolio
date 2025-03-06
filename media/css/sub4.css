@@ -1,0 +1,145 @@
+/* 와이드 pc  */
+
+	
+.videoBox{width:100%;height:100%; overflow:hidden; position:absolute}
+
+#imgBG{
+	position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+    left:50%;
+    top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+    width:auto;
+    min-width:100%; /*동영상 너비를 꽉차게*/
+    height:auto;
+    min-height:100%; /*동영상 높이를 꽉차게*/
+    transform:translateX(-50%) translateY(-50%);
+    z-index:-100;
+}
+
+
+	
+#content{ width:100%; margin:0 auto; background:rgba(0,0,0,.6);position: relative; padding-bottom: 100px;}
+#content h2{position: absolute; top: -500px;
+width: 100%; text-align: center; font-size: 4em; color: #fff;}
+
+
+.movies {perspective: 1000px;}
+.movies span {
+display: inline-block;
+transform-origin: 50% 50% -25px;
+transform-style: preserve-3d;
+animation: intro 1.6s;
+text-shadow: 1px 1px 5px #000;
+font-family: 'Anton SC';
+}
+.movies span:nth-child(2) {
+animation-delay: .1s;
+}
+.movies span:nth-child(3) {
+animation-delay: .2s;
+}
+.movies span:nth-child(4) {
+animation-delay: .3s;
+}
+.movies span:nth-child(5) {
+animation-delay: .4s;
+}
+.movies span:nth-child(6) {
+animation-delay: .5s;
+}
+.movies span:nth-child(7) {
+animation-delay: .6s;
+}
+@keyframes intro {
+0% {
+   transform: rotateX(-360deg);
+}
+70% {
+   transform: rotateX(0);
+}
+}
+
+/* trailer main */
+.main{width: 100%; margin: 0 auto; padding: 50px 0;}
+.main_video{margin: 50px auto; width: 70%;}
+.main_video img{width: 100%; height: 100%;}
+.main_video a{position: relative;}
+.main_video .play{width: 100px; height: 100px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: .3s;}
+.main_video:hover .play{transform: translate(-50%, -50%) scale(1.2);}
+
+.main .main_title{font-size: 2rem; font-family: 'Anton SC'; text-align: center; margin: 30px 0;}
+.main .hash{font-size: 1.1rem; text-align: center;}
+
+/* .block{position: relative;} */
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ED1D24, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ED1D24);
+
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 30s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+.block:after {
+	filter: blur(50px);
+}
+
+/* videobox */
+.videobox{width: 57%; background: rgba(237,29,36,.5); border-radius: 0 50px 50px 0; padding: 50px 0; margin-top: 50px;}
+.videobox img{width: 100%; height: 100%;}
+.video_inner{margin: 0 5%;}
+.video_inner li{margin-bottom: 50px;}
+.video_inner li a{position: relative;}
+.video_inner .video_title{text-align: center; font-size: 2.5rem; font-family: 'Anton SC';
+-webkit-text-stroke: 2px #000; margin: 15px 0;}
+.video_inner .hash{text-align: center;}
+
+.video_inner .play{width: 80px; height: 80px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: .3s;}
+.video_inner li:hover .play{transform: translate(-50%, -50%) scale(1.2);}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+
+
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+.main_video{width: 90%;}
+
+.videobox{width: 90%; margin: 0 auto; border-radius: 50px;}
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+.main .main_title{font-size: 1.4rem;}
+.main .hash{font-size: 1rem;}
+
+.video_inner .video_title{font-size: 1.7rem;}
+.video_inner .hash{font-size: 1rem;}
+
+
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+
+}

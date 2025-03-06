@@ -1,0 +1,629 @@
+/* 와이드 pc  */
+
+   
+.videoBox{width:100%;height:100%; overflow:hidden; position:absolute}
+#videoBG {
+   position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+   left:50%;
+   top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+   width:auto;
+   min-width:100%; /*동영상 너비를 꽉차게*/
+   height:auto;
+   min-height:100%; /*동영상 높이를 꽉차게*/
+transform:translateX(-50%) translateY(-50%);
+   z-index:-100; /*다른요소보다 아래에 위치*/
+
+}
+
+#imgBG{
+   position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+   left:50%;
+   top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+   width:auto;
+   min-width:100%; /*동영상 너비를 꽉차게*/
+   height:auto;
+   min-height:100%; /*동영상 높이를 꽉차게*/
+transform:translateX(-50%) translateY(-50%);
+   z-index:-100;
+   display:none
+}
+
+/* .down{display: block; font-size: 20px; position: absolute; 
+   left:50%; margin-left: -90px; bottom: 20%;
+   animation:ani 1s infinite  alternate;}
+@keyframes ani {
+   0% { transform:scale(1); opacity:1; color:#fff;}
+   100% { transform:scale(1.2); opacity:0.8; color:#888;}
+}	 */
+
+
+#content{ 
+   width:100%; margin:0 auto; background:rgba(0,0,0,.9);
+   padding-bottom: 50px;
+   .comics{
+      width: 100%; margin: 0 auto;
+      background: var(--sec1-back-color);
+      padding: 100px 0 ; overflow: hidden;
+      .comics_inner{width: 90%; margin: 0 auto;}
+         .comics_l{width: 49%; float: left; margin-right: 1%;}
+            h3{
+               font-size: var(--h3-font-size);
+               color: var(--h3-color); padding: var(--h3-padding);
+               letter-spacing: 5px;position: relative;z-index:1;
+            &::before {
+               content: 'COMICS';letter-spacing: 5px;
+               position: absolute; display: block; padding: var(--h3-padding);
+               left: 0;top:0; z-index:-1;font-size: var(--h3-font-size);
+               -webkit-text-stroke: 10px #ED1D24;
+               }
+            }
+            p{
+            font-size: 1rem; margin-bottom: 20px;
+            }
+            .gridbox{
+               display: grid;
+               grid-template-columns:  repeat(3, 1fr);
+               grid-gap: 1rem;
+               grid-template-areas: 
+                  'a a b'
+                  'c d b';
+            }
+            .img1{grid-area: a;}
+            .img2{grid-area: b;}
+            .img3{grid-area: c;}
+            .img4{grid-area: d;}
+            .gridbox img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+            .comics_r{width: 49%; float: right; margin-top: 110px; position: relative;}
+            img{width: 100%; height: 100%;}
+               h4{
+               font-size: 1.8rem;
+               padding: var(--h3-padding);
+               letter-spacing: 2px;position: relative;
+            }
+            p{
+            font-size: 1rem; margin-bottom: 20px;
+            }
+            .btnbox{position: relative;}
+            .more_btn{position: absolute; right: 0; top: 35px; z-index: 1;}
+   }
+   .movies{overflow: hidden;
+      width: 90%; margin: 0 auto;
+      .movies_l{float: left; margin-right: 3%; 
+         padding: 100px 0; width: 67%;
+         >p{margin-bottom: 40px;}
+      }
+      
+      h3{font-size: var(--h3-font-size); color: var(--sub-color);
+      margin-bottom: 20px;}
+      p{font-size: 1rem;  width: 100%;}
+      .gridi{
+         margin-top: 40px;
+               display: grid;
+               grid-template-columns:  repeat(2, 1fr);
+               grid-gap: 1rem;
+               grid-template-areas: 
+                  'a b'
+                  'a c';
+            }
+
+            .hide{display: none;}
+            .big_img{grid-area: a;
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;}
+            .logo{grid-area: b;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: fill;}
+            .text{grid-area: c;}
+
+
+            .movies_r{float: right; width: 30%; position: relative;}
+            .film{ pointer-events: none; height: 1200px;
+               .film1{width: 210px; height: 182px;
+                  position: absolute; left: 177px; top: 80px; object-fit: cover;
+                  transform: rotate(12deg); pointer-events: auto;}
+               .film2{width: 205px; height: 182px;
+                  position: absolute; left: 160px; top: 285px;
+                  transform: rotate(2deg); pointer-events: auto;}
+               .film3{width: 210px; height: 180px;
+                  position: absolute; left: 180px; top: 500px; object-fit: cover;
+                  transform: rotate(-10deg); pointer-events: auto;}
+               .film4{width: 212px; height: 162px;
+                  position: absolute; left: 222px; top: 712px; object-fit: cover;
+                  transform: rotate(-7deg); pointer-events: auto;}
+               .film5{width: 207px; height: 180px;
+                  position: absolute; left: 231px; top: 900px;
+                  transform: rotate(6deg); pointer-events: auto;}
+               .film_img{height: 1200px; position: absolute; left: 0; top: 0; z-index: 1;}
+            }
+            .text{width: 100%;}
+            .btnbox{position: relative;}
+            .more_btn{position: absolute; right: 0; top: 5px; z-index: 1;}
+   }
+   .characters{width: 100%;  margin: 0 auto;
+      background: url(../images/characters_back.jpg);
+      .cha_inner{width: 90%; margin: 0 auto; padding: 150px 0;
+         .btnbox{position: relative;
+         h3{font-size: var(--h3-font-size); color: var(--sub-color);
+         margin-bottom: 20px; text-align: center;}
+         p{font-size: 1.1rem; text-align: center;}
+         }
+         a{color: #fff;}
+         .more_btn{position: absolute; right: 0; bottom: 0;}
+         .gridbox{
+         margin-top: 60px;
+               display: grid;
+               grid-template-columns:  repeat(5, 1fr);
+               grid-gap: 1%;
+               grid-template-areas: 
+                  'a b c d e';
+            li{position: relative;}
+            h4{width: 90%; border-bottom: 1px solid #ddd; padding-bottom: 10px;}
+            h4:not(.ch3 h4){font-size: 2rem; position: absolute; left: 0; top: 25%; margin: 5%; line-height: 2rem; letter-spacing: 2px;}
+            .ch3 h4{font-size: 2vw; position: absolute; left: 0; top: 18%; margin: 5%;  line-height: 2rem; letter-spacing: 2px;}
+            p{width: 90%; position: absolute; left: 5%; top: 45%; font-size: 1vw;}
+            }
+            .ch1{grid-area: a;}
+            .ch2{grid-area: b;}
+            .ch3{grid-area: c;}
+            .ch4{grid-area: d;}
+            .ch5{grid-area: e;}
+            .ch6{display: none;}
+            .ch_img img{
+            width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+         filter: brightness(50%);
+            }
+      }
+   }
+
+
+.characters li{position: relative;}
+.characters .ch_img{transition: all .5s;}
+.characters li .ch_onimg {
+  position: absolute;
+  bottom: 120px;
+  width: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1;
+  opacity: 0;
+  transition: all .3s;
+}
+.characters li .ch_onimg img{width: 100%;}
+
+.characters li:hover .ch_img {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  filter: brightness(40%); 
+}
+.characters li:hover .ch_onimg{
+   opacity: 1;
+}
+.characters li:hover .ch_con{
+   opacity: 0;
+}
+.characters li:hover::after{
+   opacity: 1;
+}
+
+.characters li::after{content: ''; width: 100%; height: 1px; background: #fff; position: absolute; left: 50%; bottom: 120px; transform: translate(-50%);
+opacity: 0;transition: all .3s;}
+
+
+   .trailer{ cursor: pointer;
+      .tra_inner{width: 90%; margin: 110px auto;}
+      .btnbox{position: relative;
+         .more_btn{position: absolute; right: 0; top: 60px; z-index: 1;}
+         h3{font-size: var(--h3-font-size); color: var(--sub-color);
+         margin-bottom: 20px;}
+         p{font-size: 1.1rem; margin-bottom: 40px;}
+         }
+   .swiper1 .swiper-container{width: 100%; margin: 0 auto; overflow: hidden;}
+   .swiper1 .swiper-slide{background: #ffffff11;}
+   .mySwiper{margin-top: 50px;}
+   .mySwiper{width: 100%;}
+   .mySwiper  img{width: 100%; height: 100%; object-fit: cover; object-position: center;}
+   .tra_img{float: left; position: relative; width: 65%;}
+   .tra_img img{width: 100%; height: 100%;}
+   .tra_img::after{content: ''; width: 133px; height: 133px; background: url(../images/youtube.png)center; background-size: cover;
+   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+   dl{text-align: center; width: 35%; float: right; margin-top: 13%;}
+      dt{font-size: 2rem; font-family: 'Anton SC'; margin-bottom: 50px; line-height: 2.5rem;}
+      dd{font-size: 1.1rem; text-align: center;}
+   }
+   .fixbox{width: 100%; height: 150px; margin: 0 auto;
+   background: url(../images/fixback.jpg);
+   background-attachment: fixed;}
+
+   .gallery{width: 100%; margin: 0 auto;
+      .gal_inner{width: 90%; margin: 50px auto; background: #ED1D24;
+         position: relative; padding: 50px;}
+      .top_logo{position: absolute; left: 50%; top: -100px; transform: translateX(-50%);}
+      .more_btn{position: absolute; right: 50px; top: 100px; z-index: 1;}
+      .more_btn:hover{background: #fff; color: #ED1D24; border: 1px solid #fff;}
+      h3{font-size: var(--h3-font-size); margin-bottom: 20px;}
+      p{font-size: 1.1rem; margin-bottom: 40px;}
+      .gallery_box{
+         display: grid;
+         grid-template-columns:  1fr 1fr 1fr 1fr 2fr;
+         grid-gap: 10px;
+
+         grid-template-areas: 
+         'a a b c d'
+         'a a e e f'
+         'g h h h f';
+         }
+         .gallery_box li{overflow: hidden;}
+         .gallery_box img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+         transform: scale(1);
+         transition: all .5s;
+         }
+
+         .gallery_box img:hover{
+            transform: scale(1.2);
+         }
+
+
+
+         .image1{grid-area: a;}
+         .image2{grid-area: b;}
+         .image3{grid-area: c;}
+         .image4{grid-area: d;}
+         .image5{grid-area: e;}
+         .image6{grid-area: f;}
+         .image7{grid-area: g;}
+         .image8{grid-area: h;}
+   }
+}
+
+
+@media screen and (max-width:1500px) {
+   #content{
+      .comics{
+         .comics_r{
+            p:nth-of-type(2){display: none;}
+         }
+      }
+      .movies{
+         .movies_l{margin-right: 0; width: 60%;
+         p{width: 100%;}
+         }
+         .movies_r{width: 40%;}
+      }
+      .characters{
+         .cha_inner{
+            p{width: 80%; margin: 0 auto;}
+            .gridbox h4{border: none;}
+            .more_btn{margin-bottom: 15px;}
+         }
+      }
+      .trailer{
+         dl{height: 100%;}
+         dl dt{font-size: 2.5vw; padding: 0 3%; margin-bottom: 20px; line-height: 2.5vw;}
+         dl dd{font-size: 1.5vw;}
+         .tra_img::after{width: 100px; height: 100px;
+         }
+      }
+   }
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+   #content  .comics h4{font-size: 1.5rem;}
+   #content  .comics .more_btn{top:30px}
+   #content{
+      .movies{
+         .movies_l{width: 52%; margin-right: 0;
+            strong{display: none;}
+         .gridi{
+            display: grid;
+            grid-template-columns:  1fr;
+            grid-template-areas: 
+               'a'
+               'b'
+               'c';
+         }
+            .logo{display: none;}
+
+            .btnbox{
+               width: 100%;
+               .more_btn{right: 15px; top: 5px;}
+            }
+            .hide{display: none;}
+         }
+         .movies_r{width: 48%;}
+      }
+
+      .characters{
+         .cha_inner{
+         .gridbox{
+            margin-top: 60px;
+                  display: grid;
+                  grid-template-columns:  repeat(2, 1fr);
+                  grid-gap: 1%;
+                  grid-template-areas: 
+                     'a b'
+                     'c d'
+                     'e f';
+               li{position: relative; overflow: hidden;
+                  a{ display: flex; height: 100%;
+                     .ch_img{width: 50%;}
+                     .ch_con{width: 50%; background: rgba(0,0,0,.6); padding: 20% 0;
+                        h4{position: static; font-size: 1.5rem;}
+                        p{position: static; font-size: 1rem;}
+                     }
+                  }
+                  
+               }
+            }
+            .ch6{display: block; grid-area: f;}
+            .gridbox h4{border-bottom: 1px solid #ddd;}
+            .gridbox img{filter: none;}
+         }
+      }
+
+      .characters  li:hover .ch_img {
+      transform: perspective(900px) translateY(0) rotateX(0deg) translateZ(0);
+      filter: brightness(100%); 
+      }
+      .characters li:hover .ch_onimg{
+         opacity: 0;
+      }
+      .characters li:hover .ch_con{
+         opacity: 1;
+      }
+      .characters li:hover::after{
+         opacity: 0;
+      }
+      
+   }
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+   #content{
+      .comics{
+         .gridbox{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap: 1rem;
+            grid-template-areas: 
+               'a';
+         }
+         .img2{display: none;}
+         .img3{display: none;}
+         .img4{display: none;}
+         .comics_r{position: relative;
+         span{display: none;}
+         }
+         .btnbox{position: static;} 
+         .more_btn{top: -65px;}
+      }
+
+      .movies{
+      .movies_l{float: none; margin-right: 0; 
+         padding: 100px 0; width: 100%;
+      
+      h3{text-align: center;}
+      >p{text-align: center;}
+      .gridi{
+         margin-top: 40px;
+               display: grid;
+               grid-template-columns:  1fr 1fr;
+               grid-gap: 1rem;
+               grid-template-areas: 
+                  'a b'
+                  'a c'
+                  'q q';
+            
+            .logo{display: block;}
+            }
+            .avengers{display: none;}
+            .black{grid-area: q; display: grid;
+            
+               grid-template-columns:  1fr 1fr;
+               grid-gap: 1rem;
+               grid-template-areas: 
+                  'e w'
+                  'r w';
+                  
+                  .big_img{grid-area: w;}
+                  .logo{grid-area: e;}
+                  .text{grid-area: r;}
+            }
+            
+      }
+      
+      .film{display: none;}
+   }
+
+
+   .characters{
+      .cha_inner{
+         .gridbox{
+            grid-template-areas: 
+                  'a b'
+                  'c d';
+            li{
+               a{ flex-wrap: wrap;
+                  .ch_img{width: 100%; height: 300px;}
+                  .ch_con{width: 100%; background: rgba(255,255,255,.8); padding: 10px 0 30px 0;
+                     h4{color: #333;}
+                     p{color: #333; font-size: 1rem;}
+                  }
+               }
+                  h4{border-bottom: 1px solid #777;}
+               }
+            }
+            li:nth-child(5){display: none;}
+            li:nth-child(6){display: none;}
+            p{width: 100%;}
+            .more_btn{margin-bottom: 90px;}
+         }
+      }
+
+   
+   .gallery{
+      .more_btn{top: 60px;}
+      .gallery_box{
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         grid-gap: 10px;
+
+         grid-template-areas: 
+         'a a b c'
+         'a a e e'
+         'g h h h';
+         }
+         .image4{display: none;}
+         .image6{display: none;}
+
+   }
+   }
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+   #content{ 
+      .comics{position: relative;
+            .comics_l{width: 100%; float: none;
+            }
+               .gridbox{
+                  display: none;
+               }
+
+               .gridbox img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               }
+               .comics_r{width: 100%; float: none; margin-top: 40px;
+               position: static;
+               h4{text-align: center;}
+               .btnbox{position: static;}
+               .more_btn{right: 0; top: 35px;}}
+            
+      }
+
+      .movies{width: 100%;
+      .movies_l{
+         .gridbox{
+            .gridi{ overflow: hidden;
+               display: block;
+                  .big_img{width: 100%; height: 200px;}
+                  .logo{width: 20%; height: 110px; float: left; padding: 2%; background: rgba(0,0,0,.6);}
+                  .text{padding: 2%; width: 97%; height: 110px; text-align: left; background: rgba(0,0,0,.6); font-size: 0.9rem;
+                  span{display: none;}}
+               }
+                  .avengers{display: none;}
+                  .black{display: block;
+                  .big_img{object-position: 20% 20%;}
+                  }
+         }
+         p{
+            text-align: justify;
+            margin: 0 15px;
+            box-sizing: border-box;
+            width: auto;
+         }
+      }
+      }
+
+      .characters  .cha_inner .gridbox li a .ch_con  h4{font-size: 1.2rem;}
+
+      .trailer{
+         .btnbox{position: relative;
+            p{font-size: 1rem; margin-bottom: 20px;}
+            }
+      .swiper1 .swiper-container{width: 100%; margin: 0 auto; overflow: hidden;}
+      .swiper1 .swiper-slide{background: none;}
+      .mySwiper{margin-top: 0px; background: none;}
+
+      .mySwiper  img{width: 100%; height: 100%; object-fit: cover; object-position: center;}
+      .tra_img{float: none; position: relative; width: 100%;}
+         dl{text-align: center; width: 100%; float: none; margin-top: 5%; overflow: hidden; background: none; text-align: left;
+            dt{font-size: 1rem; font-family: 'roboto'; margin-bottom: 50px; float: left; padding: 0;}
+            dd{font-size: 1rem; text-align: center; float: right;}
+         }
+      }
+   }
+}
+
+
+@media screen and (max-width:665px) {
+   #content .characters .cha_inner .more_btn{margin-bottom: 115px;}
+               
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+   #content{
+      .characters{
+         .cha_inner{ .more_btn{margin-bottom: 87px;}
+            .btnbox{
+               p{font-size: 1rem;}
+            }
+            .gridbox{
+               grid-template-columns: 1fr;
+               grid-template-areas: 
+                        'a'
+                        'b'
+                        'c';
+                  li{
+                     a{ flex-wrap: wrap;
+                        .ch_img{width: 100%; height: 300px;}
+                        .ch_con{width: 100%; background: rgba(255,255,255,.8); padding: 20px 0 30px;
+                           h4{color: #333; font-size: 1.4rem; margin: 0 5%;}
+                           p{color: #333; font-size: 1rem; margin-top: 10px;}
+                        }
+                        
+                     }
+                     
+                  }
+               }
+            li:nth-child(4){display: none;}
+            }
+      }
+      .trailer .btnbox p{font-size: 0.9rem;}
+      .trailer dd{display: none;}
+      .trailer dl dt{line-height: 1.3rem;}
+
+      .gallery{
+         p{display: none;}
+         .gallery_box{
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-gap: 10px;
+
+            grid-template-areas: 
+            'a a c'
+            'a a e'
+            'g h h';
+            }
+
+            .image2{display: none;}
+         }
+         
+   
+   }
+}
+
+@media screen and (max-width:608px) {
+   #content .characters .cha_inner .more_btn{margin-bottom: 115px;}
+               
+
+}
+

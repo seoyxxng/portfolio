@@ -1,0 +1,439 @@
+/* 와이드 pc  */
+
+	
+.videoBox{width:100%;height:100%; overflow:hidden; position:absolute}
+
+#imgBG{
+	position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+    left:50%;
+    top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+    width:auto;
+    min-width:100%; /*동영상 너비를 꽉차게*/
+    height:auto;
+    min-height:100%; /*동영상 높이를 꽉차게*/
+    transform:translateX(-50%) translateY(-50%);
+    z-index:-100;
+}
+
+
+	
+#content{ width:100%; margin:0 auto; background:rgba(0,0,0,.5);position: relative; padding-bottom: 100px;}
+#content h2{position: absolute; top: -500px;
+width: 100%; text-align: center; font-size: 4em; color: #fff;}
+
+
+.movies {perspective: 1000px;}
+.movies span {
+display: inline-block;
+transform-origin: 50% 50% -25px;
+transform-style: preserve-3d;
+animation: intro 1.6s;
+text-shadow: 1px 1px 5px #000;
+font-family: 'Anton SC';
+}
+.movies span:nth-child(2) {
+animation-delay: .1s;
+}
+.movies span:nth-child(3) {
+animation-delay: .2s;
+}
+.movies span:nth-child(4) {
+animation-delay: .3s;
+}
+.movies span:nth-child(5) {
+animation-delay: .4s;
+}
+.movies span:nth-child(6) {
+animation-delay: .5s;
+}
+.movies span:nth-child(7) {
+animation-delay: .6s;
+}
+@keyframes intro {
+0% {
+   transform: rotateX(-360deg);
+}
+70% {
+   transform: rotateX(0);
+}
+}
+
+
+/* intro */
+.intro{background: #000;}
+.intro_con{width: 90%; margin: 0 auto; padding: 100px 0;}
+.intro h3{font-size: 3rem; text-align: center;}
+.intro h3 span{background: #ED1D24; padding: 0 10px;}
+.intro p{margin-top: 50px; text-align: center;}
+.intro h3 br{display: none;}
+
+
+
+/* music */
+.music{position: relative; width: 90%; margin: 0 auto; padding: 130px 0; overflow: hidden;}
+.music h3{font-size: 3rem; text-align: right; margin-right: 15%;}
+#player-container {position: absolute; top: 50%; left: 0; width: 430px; height: 100px;
+transform: translateY(-50%);}
+.music .music_cha{position: absolute; right: 0; top: 50px;}
+
+
+#player {
+  position: relative;
+  height: 100%;
+  z-index: 3;
+}
+
+#player-track {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  left: 15px;
+  padding: 13px 22px 10px 184px;
+  background-color: #fff7f7;
+  border-radius: 15px 15px 0 0;
+  transition: 0.3s ease top;
+  z-index: 1;
+}
+
+#player-track.active {
+  top: -92px;
+}
+
+#album-name {
+  color: #54576f;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#track-name {
+  color: #acaebd;
+  font-size: 13px;
+  margin: 2px 0 13px 0;
+}
+
+#track-time {
+  height: 12px;
+  margin-bottom: 3px;
+  overflow: hidden;
+}
+
+#current-time {
+  float: left;
+}
+
+#track-length {
+  float: right;
+}
+
+#current-time,
+#track-length {
+  color: transparent;
+  font-size: 11px;
+  background-color: #ffe8ee;
+  border-radius: 10px;
+  transition: 0.3s ease all;
+}
+
+#track-time.active #current-time,
+#track-time.active #track-length {
+  color: #000;
+  background-color: transparent;
+}
+
+#seek-bar-container,
+#seek-bar {
+  position: relative;
+  height: 4px;
+  border-radius: 4px;
+}
+
+#seek-bar-container {
+  background-color: #ffe8ee;
+  cursor: pointer;
+}
+
+#seek-time {
+  position: absolute;
+  top: -29px;
+  color: #fff;
+  font-size: 12px;
+  white-space: pre;
+  padding: 5px 6px;
+  border-radius: 4px;
+  display: none;
+}
+
+#s-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+#seek-time,
+#s-hover {
+  background-color: #3b3d50;
+}
+
+#seek-bar {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: #000;
+  transition: 0.2s ease width;
+  z-index: 1;
+}
+
+#player-content {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 30px 80px #000;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+#album-art {
+  position: absolute;
+  top: -40px;
+  width: 115px;
+  height: 115px;
+  margin-left: 40px;
+  transform: rotateZ(0);
+  transition: 0.3s ease all;
+  box-shadow: 0 0 0 10px #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#album-art.active {
+  top: -60px;
+  box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
+}
+
+#album-art:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: -10px auto 0 auto;
+  background-color: #d6dee7;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px #fff;
+  z-index: 2;
+}
+
+#album-art img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+}
+
+#album-art img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+#album-art.active img.active {
+  z-index: 1;
+  animation: rotateAlbumArt 3s linear 0s infinite forwards;
+}
+
+@keyframes rotateAlbumArt {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+#buffer-box {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 13px;
+  color: #1f1f1f;
+  font-size: 13px;
+  font-family: Helvetica;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  padding: 6px;
+  margin: -12px auto 0 auto;
+  background-color: rgba(255, 255, 255, 0.19);
+  opacity: 0;
+  z-index: 2;
+}
+
+#album-art img,
+#buffer-box {
+  transition: 0.1s linear all;
+}
+
+#album-art.buffering img {
+  opacity: 0.25;
+}
+
+#album-art.buffering img.active {
+  opacity: 0.8;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+#album-art.buffering #buffer-box {
+  opacity: 1;
+}
+
+#player-controls {
+  width: 250px;
+  height: 100%;
+  margin: 0 5px 0 141px;
+  float: right;
+  overflow: hidden;
+}
+
+.control {
+  width: 33.333%;
+  float: left;
+  padding: 12px 0;
+}
+
+.button {
+  width: 26px;
+  height: 26px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button i {
+  display: block;
+  color: #d6dee7;
+  font-size: 26px;
+  text-align: center;
+  line-height: 1;
+}
+.button i {
+  transition: 0.2s ease all;
+}
+
+.button:hover i {
+  color: #000;
+}
+
+/* overview */
+.overview{background: #000; padding: 100px 0;}
+.overview_l{width: 90%; margin: 0 auto;}
+.overview h3{font-size: 2rem; margin-bottom: 80px; text-align: right;}
+.title{font-family: 'Anton SC'; font-size: 1.5rem; text-align: center;
+   margin-bottom: 1rem; transition: all .5s;}
+.text{margin-top: 1rem; font-size: .9rem;}
+
+.gridbox{
+   margin-bottom: 80px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 1rem;
+}
+.gridbox img{width: 100%; height: 100%; object-fit: cover; object-position: center;}
+.gridreverse img{width: 100%; height: 100%; object-fit: cover; object-position: center;}
+
+.girdbox1{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1rem;
+   grid-template-areas: 
+      't t t'
+      'q w e'
+      'p p p';
+}
+.title{grid-area: t;}
+.img1{grid-area: q;}
+.img2{grid-area: w;}
+.img3{grid-area: e;}
+.text{grid-area: p;}
+
+.gridreverse{
+   margin-bottom: 80px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 1rem;
+}
+.gridreverse2{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1rem;
+   grid-template-areas: 
+      't t t'
+      'q w e'
+      'p p p';
+}
+
+.overview div{overflow: hidden;}
+.overview img{transition: all .5s;}
+.overview img:hover{transform: scale(1.05);}
+.gridbox:hover .title{letter-spacing: .5rem;}
+.gridreverse:hover .title{letter-spacing: .5rem;}
+
+
+@media screen and (max-width:1900px) {
+.intro h3 br{display: block;}
+
+}
+
+@media screen and (max-width:1400px) {
+.music h3{font-size: 2.5rem;}
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+
+
+.music h3{width: 42%; float: right; margin-right: 17%;}
+.music h3 br{display: none;}
+
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+.intro p br{display: none;}
+.intro p{text-align: left;}
+
+.music h3{width: 42%; margin: 0; font-size: 2rem;}
+.music .music_cha{display: none;}
+
+.overview h3{text-align: center;}
+
+.gridbox{display: block;}
+.gridreverse{display: block;}
+.gridbox2{display: none;}
+.gridreverse1{display: none;}
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+#player-container{top: 40%; left: 50%; transform: translate(-50%, -50%);}
+.music h3{width: 100%; float: none; margin-top: 200px; font-size: 1.5rem; text-align: center;}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+
+}
